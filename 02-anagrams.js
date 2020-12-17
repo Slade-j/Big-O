@@ -56,8 +56,15 @@ function thirdAnagram(str1, str2) {
   return true;
 }
 
-console.log(thirdAnagram("gizmo", "sally"));
+// console.log(thirdAnagram("gizmo", "sally"));
 
 function fourthAnagram(str1, str2) {
-  // Code goes here ....
+  let obj = {
+    str1: str1.split('').sort().join(''),
+    str2: str2.split('').sort().join('')
+  };
+
+  return obj.str1 === obj.str2;
 }
+
+console.log(fourthAnagram("gizmo", "sally"));
